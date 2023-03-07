@@ -29,6 +29,7 @@ const barbaraRamos = createTeamMember('Barbara Ramos', 'Graphic Designer', 'barb
 
 // Creation of an array to contain the different staff members
 const teamMembers = [wayneBarnett, angelaCaroll, walterGordon, angelaLopez, scottEstrada, barbaraRamos];
+const membersContainer = document.querySelector('.container');
 
 // To check if the code is correct, we can console print all the single information for every team member
 // The first for loop goes through the entire array
@@ -37,11 +38,12 @@ for(let i = 0; i < teamMembers.length; i++) {
   for(let key in teamMembers[i]) {
     console.log(teamMembers[i][key]);
   }
+  
+  // To transform our project into a visual one, we can then print all the information as strings in our DOM
+  membersContainer.innerHTML += `<div>${teamMembers[i].name}, ${teamMembers[i].role}, ${teamMembers[i].photo}</div>`;
 }
 
 
-
-// To transform our project into a visual one, we can then print all the information as strings in our DOM
 
 
 // To give our project its final look, we can transform the photo string into an image
