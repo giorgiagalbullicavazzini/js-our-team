@@ -17,3 +17,14 @@ Team description
 #team-description {
   max-width: 37.5rem;
 }
+
+/*
+============
+Team members
+============
+*/
+
+.member-photo {
+  display: block;
+  width: 100%;
+}

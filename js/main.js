@@ -51,6 +51,8 @@ const teamMembers = [wayneBarnett, angelaCaroll, walterGordon, angelaLopez, scot
 const membersContainer = document.getElementById('team-members');
 const row = elementCreation('div');
 addClass(row, 'row');
+addClass(row, 'gy-5');
+addClass(row, 'mb-5');
 membersContainer.append(row);
 
 // To check if the code is correct, we can console print all the single information for every team member
@@ -63,22 +65,28 @@ for(let i = 0; i < teamMembers.length; i++) {
 
   // To transform our project into a visual one, we can then print all the information as strings in our DOM and transform the photo string into an image
   const col = elementCreation('div');
-  addClass(col, 'col');
+  addClass(col, 'col-4');
 
   const imageContainer = elementCreation('div');
-  addClass(imageContainer, 'member-photo');
-  imageContainer.innerHTML = `<img src="img/${teamMembers[i].photo}" alt="Foto di ${teamMembers[i].name}">`;
+  addClass(imageContainer, 'card');
+  addClass(imageContainer, 'bg-white');
+  addClass(imageContainer, 'border-0');
+  imageContainer.innerHTML = `<img src="img/${teamMembers[i].photo}" class="card-img-top rounded-0" alt="Foto di ${teamMembers[i].name}">`;
   col.append(imageContainer);
 
-  const teamMemberName = elementCreation('div');
-  addClass(teamMemberName, 'member-name');
+  const teamMemberInfo = elementCreation('div');
+  addClass(teamMemberInfo, 'card-body');
+
+  const teamMemberName = elementCreation('h5');
+  addClass(teamMemberName, 'card-title');
   teamMemberName.innerHTML = teamMembers[i].name;
-  col.append(teamMemberName);
+  teamMemberInfo.append(teamMemberName);
 
-  const teamMemberRole = elementCreation('div');
-  addClass(teamMemberRole, 'member-role');
+  const teamMemberRole = elementCreation('p');
+  addClass(teamMemberRole, 'card-text');
   teamMemberRole.innerHTML = teamMembers[i].role;
-  col.append(teamMemberRole);
+  teamMemberInfo.append(teamMemberRole);
 
+  imageContainer.append(teamMemberInfo);
   row.append(col);
 }
