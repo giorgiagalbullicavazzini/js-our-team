@@ -30,11 +30,13 @@ const barbaraRamos = createTeamMember('Barbara Ramos', 'Graphic Designer', 'barb
 // Creation of an array to contain the different staff members
 const teamMembers = [wayneBarnett, angelaCaroll, walterGordon, angelaLopez, scottEstrada, barbaraRamos];
 
-console.log(teamMembers);
+// To check if the code is correct, we can console print all the single information for every team member
+for(let i = 0; i < teamMembers.length; i++) {
+  for(let key in teamMembers[i]) {
+    console.log(teamMembers[i][key]);
+  }
+}
 
-
-
-// To check if the code is correct, we can then console print all the single information for every team member
 
 
 // To transform our project into a visual one, we can then print all the information as strings in our DOM
