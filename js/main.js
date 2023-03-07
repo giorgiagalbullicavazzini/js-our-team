@@ -31,6 +31,8 @@ const barbaraRamos = createTeamMember('Barbara Ramos', 'Graphic Designer', 'barb
 const teamMembers = [wayneBarnett, angelaCaroll, walterGordon, angelaLopez, scottEstrada, barbaraRamos];
 
 // To check if the code is correct, we can console print all the single information for every team member
+// The first for loop goes through the entire array
+// The second loop prints all the information needed
 for(let i = 0; i < teamMembers.length; i++) {
   for(let key in teamMembers[i]) {
     console.log(teamMembers[i][key]);
