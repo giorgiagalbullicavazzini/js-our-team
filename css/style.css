@@ -1,0 +1,19 @@
+/*
+============
+Containers
+============
+*/
+
+body {
+  background-color: #f5f5f1;
+}
+
+/*
+============
+Team description
+============
+*/
+
+#team-description {
+  max-width: 37.5rem;
+}
